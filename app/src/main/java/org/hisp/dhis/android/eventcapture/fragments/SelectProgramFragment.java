@@ -363,15 +363,15 @@ public class SelectProgramFragment extends Fragment
                 return getString(R.string.error_401_description);
             }
 
-            if (failedItem.getHttpStatusCode() == 408) {
+            if (failedItem.getHttpStatusCode()== 408) {
                 return getString(R.string.error_408_description);
             }
 
-            if (failedItem.getHttpStatusCode() >= 400 && failedItem.getHttpStatusCode() < 500) {
+            if (failedItem.getHttpStatusCode() >= 400 && failedItem.getHttpStatusCode()< 500) {
                 return getString(R.string.error_series_400_description);
             }
 
-            if (failedItem.getHttpStatusCode() >= 500) {
+            if (failedItem.getHttpStatusCode()>= 500) {
                 return failedItem.getErrorMessage();
             }
         }
